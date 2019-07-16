@@ -64,7 +64,7 @@ module Inspec::Resources
                     "[System.Environment]::GetEnvironmentVariable('#{env}', [System.EnvironmentVariableTarget]::#{target})"
                   end
                 else
-                  "env"
+                  "sh -cli env"
                 end
 
       out = inspec.command(command)
